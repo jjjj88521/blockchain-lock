@@ -122,38 +122,39 @@
 												<h3>裝置1</h3>
 											<span><i class="far fa-clock"></i><input type="text" id="date1" placeholder = "輸入預約時間"><br></span>
 											<span><a class="btn btn-primary btn-lg" href="#myPopupconfirmONE" data-rel="popup" data-position-to="window" button id="addcontract" onclick=confirmONE()>預約</a></span>
+											<span><a class="btn btn-primary btn-lg" href="#myPopupcancel1" data-rel="popup" data-position-to="window" button id="cancelcontract" onclick=confirmONE()>取消預約</a></span>
 									  	</div>
 							  	</div>
 						  	</div>
 						  	<div class='col-md-4 text-left'>
 							  	<div class='outer'>
 									  	<div class='upper'>
-											<!-- <img src='Yayi2.jpg'> -->
 									  	</div>
 									  	<div class='lower'>
 												<h3>裝置2</h3>
 											<span><i class="far fa-clock"></i><input type="text" id="date2" placeholder = "輸入預約時間"><br></span>
 											<span><a class="btn btn-primary btn-lg" href="#myPopupconfirmTWO" data-rel="popup" data-position-to="window" button id="addcontract"onclick=confirmTWO()>預約</a></span>
+											<span><a class="btn btn-primary btn-lg" href="#myPopupcancel2" data-rel="popup" data-position-to="window" button id="cancelcontract" onclick=confirmONE()>取消預約</a></span>
 									  	</div>
 							  	</div>
 						  	</div>
-						  	<div class='col-md-4 text-left'>
+						  	<!-- <div class='col-md-4 text-left'>
 							  	<div class='outer'>
-									  	<div class='upper'>
-											<!-- <img src='Yayi3.jpg'> -->
-									  	</div>
+									  	<div class='upper'> -->
+									  	<!-- </div>
 									  	<div class='lower'>
 												<h3>裝置3</h3>												
 											<span><i class="far fa-clock"></i><input type="text" id="date4" placeholder = "輸入預約時間"><br></span>
 											<span><a class="btn btn-primary btn-lg" href="#myPopupconfirmFOUR" data-rel="popup" data-position-to="window" button id="addcontract"onclick=confirmFOUR()>預約</a></span>
+											<span><a class="btn btn-primary btn-lg" href="#myPopupcancel3" data-rel="popup" data-position-to="window" button id="cancelcontract" onclick=confirmONE()>取消預約</a></span>
 									  	</div>
 							  	</div>
-						  	</div>						
+						  	</div>						 -->
 					  	</div>
 					  </div>
 			    <div>
 	        </div>
-			
+			<!-- 確認預約 -->
 			<div data-role="popup" id="myPopupconfirmONE" data-overlay-theme="b" class="ui-content" style="min-width:250px;">
 				<div>
 				  <h3>確認預約</h3>
@@ -161,7 +162,6 @@
 				  <p id="dateONE"></p>
 				  <button id="confirmroomcontrolBTN" onclick = PayONE()>付款</button>
 				  <button id="cancel1" onclick = CancelONE()>取消</button>
-				  <button id="getqrcodeBTNONE" onclick = GetQRcodeONE()>QRcode</button>
 				  <p id="qrcodeONE"></p>
 				  <p id="paydateONE"></p>
 				</div>
@@ -174,24 +174,59 @@
 				  <p id="dateTWO"></p>
 				  <button id="confirmroomcontrolBTN" onclick = PayTWO()>付款</button>
 				  <button id="cancel1" onclick = CancelTWO()>取消</button>
-				  <button id="getqrcodeBTNTWO" onclick = GetQRcodeONE()>QRcode</button>
 				  <p id="qrcodeTWO"></p>
 				  <p id="paydateTWO"></p>
 				</div>
 			</div>
 			
-			<div data-role="popup" id="myPopupconfirmFOUR" data-overlay-theme="b" class="ui-content" style="min-width:250px;">
+			<!-- <div data-role="popup" id="myPopupconfirmFOUR" data-overlay-theme="b" class="ui-content" style="min-width:250px;">
 				<div>
 				  <h3>確認預約</h3>
 				  <p>裝置3</p>
 				  <p id="dateFOUR"></p>
 				  <button id="confirmroomcontrolBTN" onclick = PayFOUR()>付款</button>
 				  <button id="cancel1" onclick = CancelFOUR()>取消</button>
-				  <button id="getqrcodeBTNFOUR" onclick = GetQRcodeONE()>QRcode</button>
 				  <p id="qrcodeFOUR"></p>
 				  <p id="paydateFOUR"></p>
 				</div>
+			</div> -->
+
+			<!-- 取消預約 -->
+			<div data-role="popup" id="myPopupcancel1" data-overlay-theme="b" class="ui-content" style="min-width:250px;">
+				<div>
+				  <h3>取消預約</h3>
+				  <p>裝置1</p>
+				  <p id="dateONE"></p>
+				  <button id="confirmroomcontrolBTN" onclick = PayONE()>確認</button>
+				  <button id="cancel1" onclick = CancelONE()>取消</button>
+				  <p id="qrcodeONE"></p>
+				  <p id="paydateONE"></p>
+				</div>
 			</div>
+
+			<div data-role="popup" id="myPopupcancel2" data-overlay-theme="b" class="ui-content" style="min-width:250px;">
+				<div>
+				  <h3>取消預約</h3>
+				  <p>裝置2</p>
+				  <p id="dateTWO"></p>
+				  <button id="confirmroomcontrolBTN" onclick = PayTWO()>確認</button>
+				  <button id="cancel2" onclick = CancelTWO()>取消</button>
+				  <p id="qrcodeONE"></p>
+				  <p id="paydateONE"></p>
+				</div>
+			</div>
+
+			<!-- <div data-role="popup" id="myPopupcancel3" data-overlay-theme="b" class="ui-content" style="min-width:250px;">
+				<div>
+				  <h3>取消預約</h3>
+				  <p>裝置3</p>
+				  <p id="dateFOUR"></p>
+				  <button id="confirmroomcontrolBTN" onclick = PayFOUR()>確認</button>
+				  <button id="cancel3" onclick = CancelFOUR()>取消</button>
+				  <p id="qrcodeONE"></p>
+				  <p id="paydateONE"></p>
+				</div>
+			</div> -->
 
         </section>      
 		
@@ -199,172 +234,172 @@
 						/*視窗動畫*/
 
 
-						// //連結私有鏈
-						// if (typeof web3 !== 'undefined') {
-						// 		 web3 = new Web3(web3.currentProvider);
-						//  } else {
-						// 		 // set the provider you want from Web3.providers
-						// 		 web3 = new Web3(new Web3.providers.HttpProvider("http://134.208.3.201:1225"));
-						//  }
+						//連結私有鏈
+						if (typeof web3 !== 'undefined') {
+								 web3 = new Web3(web3.currentProvider);
+						 } else {
+								 // set the provider you want from Web3.providers
+								 web3 = new Web3(new Web3.providers.HttpProvider("http://134.208.3.201:1225"));
+						 }
 
-						//  //設定AccountManagement合約
-						//  var AccountManagementABI = web3.eth.contract([{"constant":true,"inputs":[{"internalType":"string","name":"_username","type":"string"}],"name":"CheckAccount","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"string","name":"_username","type":"string"},{"internalType":"address","name":"_useraddress","type":"address"}],"name":"GetContractAddress","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"string","name":"_username","type":"string"},{"internalType":"address","name":"_useraddress","type":"address"}],"name":"GetContractName","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_username","type":"string"},{"internalType":"address","name":"_useraddress","type":"address"}],"name":"NewAccount","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_contractrname","type":"string"},{"internalType":"address","name":"_contractaddress","type":"address"}],"name":"NewContract","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]);
-						//  var AccountManagement = AccountManagementABI.at('0xB8Cd20849d98ba6c67Daf8d0EdA8AcCb330616A7');
-						//  console.log(AccountManagement);
+						 //設定AccountManagement合約
+						 var AccountManagementABI = web3.eth.contract([{"constant":true,"inputs":[{"name":"_username","type":"string"}],"name":"CheckAccount","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_LightQR","type":"bytes32"}],"name":"RestoreSettings","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"sendcontrolbalance","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_LightQR","type":"bytes32"}],"name":"controlQR","outputs":[{"name":"","type":"bool"},{"name":"","type":"string"},{"name":"","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_user","type":"address"}],"name":"withdraw","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_username","type":"string"},{"name":"_useraddress","type":"address"}],"name":"NewAccount","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_Lightnumber","type":"string"}],"name":"getRentStatus","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_user","type":"address"}],"name":"getinformation","outputs":[{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_user","type":"address"},{"name":"_Lightnumber","type":"string"},{"name":"_rentedtime","type":"string"}],"name":"paytolight","outputs":[{"name":"","type":"bool"},{"name":"","type":"bytes32"}],"payable":true,"stateMutability":"payable","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"name":"orderaddress","type":"address"},{"indexed":false,"name":"orderlight","type":"string"},{"indexed":false,"name":"time","type":"string"},{"indexed":false,"name":"orderstatus","type":"string"}],"name":"Order","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"canceladdress","type":"address"},{"indexed":false,"name":"cancelstatus","type":"string"}],"name":"Cancel","type":"event"}]);
+						 var AccountManagement = AccountManagementABI.at('0xB8Cd20849d98ba6c67Daf8d0EdA8AcCb330616A7');
+						 console.log(AccountManagement);
 
-						//  var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+						 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
 			 
-						//  //註冊帳戶->加入到AccountManagement合約做儲存
-						//  async function register(){
-						// 	 var test = $("#registerpasswd").val();
-						// 	 var userwalletaddress = web3.personal.newAccount(test);
-						// 	 $('#registeraddress').html(userwalletaddress);
-						// 	 AccountManagement.NewAccount($("#registerusername").val(),$("#registeraddress").html(),{from:web3.eth.accounts[0]});
-						//  }
+						 //註冊帳戶->加入到AccountManagement合約做儲存
+						 async function register(){
+							 var test = $("#registerpasswd").val();
+							 var userwalletaddress = web3.personal.newAccount(test);
+							 $('#registeraddress').html(userwalletaddress);
+							 AccountManagement.NewAccount($("#registerusername").val(),$("#registeraddress").html(),{from:web3.eth.accounts[0]});
+						 }
 
-						//  //登入帳戶->取得帳戶資訊
-						//  async function login(){
-						// 	 var passwd = $("#loginpasswd").val();
-						// 	 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	 $('#loginmessage').html(web3.personal.unlockAccount(userwalletaddress,passwd));
-						// 	 if(web3.personal.unlockAccount(userwalletaddress,passwd)==true){
-						// 		$('#username').html("User : " + $("#loginusername").val());
-						// 		$('#useraddress').html("Wallet Address : " + userwalletaddress);
-						// 		$('#userbalance').html("Wallet Balance : " + web3.fromWei(web3.eth.getBalance(userwalletaddress),'ether'));
-						// 	 }
-						//  }
+						 //登入帳戶->取得帳戶資訊
+						 async function login(){
+							 var passwd = $("#loginpasswd").val();
+							 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							 $('#loginmessage').html(web3.personal.unlockAccount(userwalletaddress,passwd));
+							 if(web3.personal.unlockAccount(userwalletaddress,passwd)==true){     
+								$('#username').html("User : " + $("#loginusername").val());
+								$('#useraddress').html("Wallet Address : " + userwalletaddress);
+								$('#userbalance').html("Wallet Balance : " + web3.fromWei(web3.eth.getBalance(userwalletaddress),'ether'));
+							 }
+						 }
+						 //以下是垃圾
+						 //設定門禁合約
+						 var PayToRoomABI = web3.eth.contract([{"inputs":[{"internalType":"string","name":"_housename","type":"string"},{"internalType":"string","name":"_houseaddress","type":"string"},{"internalType":"string","name":"_housephone","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"canceldate","type":"string"},{"indexed":false,"internalType":"string","name":"cancelroom","type":"string"},{"indexed":false,"internalType":"address","name":"canceladdress","type":"address"},{"indexed":false,"internalType":"string","name":"cancelstatus","type":"string"}],"name":"Cancel","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"newdate","type":"string"},{"indexed":false,"internalType":"string","name":"roomtype","type":"string"},{"indexed":false,"internalType":"address","name":"useraddress","type":"address"},{"indexed":false,"internalType":"string","name":"paystatus","type":"string"}],"name":"NewPay","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"orderdate","type":"string"},{"indexed":false,"internalType":"string","name":"orderroom","type":"string"},{"indexed":false,"internalType":"address","name":"orderaddress","type":"address"},{"indexed":false,"internalType":"string","name":"orderstatus","type":"string"}],"name":"Order","type":"event"},{"constant":true,"inputs":[],"name":"HouseAddress","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"HouseName","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"HousePhone","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_canceldate","type":"string"},{"internalType":"string","name":"_cancelroom","type":"string"}],"name":"OrderCancel","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_oderdate","type":"string"},{"internalType":"string","name":"_orderroom","type":"string"}],"name":"Orderprocessing","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_roomnumber","type":"string"},{"internalType":"string","name":"_date","type":"string"},{"internalType":"address","name":"_user","type":"address"}],"name":"controlQR","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getRentStatus","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getRentedDate","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getRentedNumber","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getRentedQRcode","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"string","name":"_roomnumber","type":"string"},{"internalType":"string","name":"_date","type":"string"},{"internalType":"bytes32","name":"_roomqr","type":"bytes32"}],"name":"getcontrol","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_roomnumber","type":"string"},{"internalType":"string","name":"_date","type":"string"},{"internalType":"address","name":"_user","type":"address"}],"name":"paytoroom","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[],"name":"sendcontrolbalance","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]);
+						 var PayToRoom = PayToRoomABI.at('0xa07e9410d929e379eef61cf5f7377a3985b41101');
+						 console.log(PayToRoom);
 
-						//  //設定門禁合約
-						//  var PayToRoomABI = web3.eth.contract([{"inputs":[{"internalType":"string","name":"_housename","type":"string"},{"internalType":"string","name":"_houseaddress","type":"string"},{"internalType":"string","name":"_housephone","type":"string"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"canceldate","type":"string"},{"indexed":false,"internalType":"string","name":"cancelroom","type":"string"},{"indexed":false,"internalType":"address","name":"canceladdress","type":"address"},{"indexed":false,"internalType":"string","name":"cancelstatus","type":"string"}],"name":"Cancel","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"newdate","type":"string"},{"indexed":false,"internalType":"string","name":"roomtype","type":"string"},{"indexed":false,"internalType":"address","name":"useraddress","type":"address"},{"indexed":false,"internalType":"string","name":"paystatus","type":"string"}],"name":"NewPay","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"orderdate","type":"string"},{"indexed":false,"internalType":"string","name":"orderroom","type":"string"},{"indexed":false,"internalType":"address","name":"orderaddress","type":"address"},{"indexed":false,"internalType":"string","name":"orderstatus","type":"string"}],"name":"Order","type":"event"},{"constant":true,"inputs":[],"name":"HouseAddress","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"HouseName","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"HousePhone","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_canceldate","type":"string"},{"internalType":"string","name":"_cancelroom","type":"string"}],"name":"OrderCancel","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_oderdate","type":"string"},{"internalType":"string","name":"_orderroom","type":"string"}],"name":"Orderprocessing","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_roomnumber","type":"string"},{"internalType":"string","name":"_date","type":"string"},{"internalType":"address","name":"_user","type":"address"}],"name":"controlQR","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getRentStatus","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getRentedDate","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getRentedNumber","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getRentedQRcode","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"string","name":"_roomnumber","type":"string"},{"internalType":"string","name":"_date","type":"string"},{"internalType":"bytes32","name":"_roomqr","type":"bytes32"}],"name":"getcontrol","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"internalType":"address payable","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_roomnumber","type":"string"},{"internalType":"string","name":"_date","type":"string"},{"internalType":"address","name":"_user","type":"address"}],"name":"paytoroom","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[],"name":"sendcontrolbalance","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]);
-						//  var PayToRoom = PayToRoomABI.at('0xa07e9410d929e379eef61cf5f7377a3985b41101');
-						//  console.log(PayToRoom);
+						 var i;
+						 var dates1 = []; 
+						function DisableDates1(date) {
+							var string = jQuery.datepicker.formatDate('yy/mm/dd', date);
+							return [dates1.indexOf(string) == -1];
+						}
+						 $(function() {
+							$("#date1").datepicker({
+								beforeShowDay: DisableDates1,
+								dateFormat: 'yy/mm/dd'
+							});
+						 });
+						function CancelONE(){
+							var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							PayToRoom.OrderCancel($('#date1').val(),"room1",{from:userwalletaddress,gas:200000,gasPrice:21000});
+							for(i=0;i<dates1.length;i++){
+								if(dates1[i]==$('#date1').val()){
+									delete dates1[i];
+								}
+							}
+						}
 
-						//  var i;
-						//  var dates1 = []; 
-						// function DisableDates1(date) {
-						// 	var string = jQuery.datepicker.formatDate('yy/mm/dd', date);
-						// 	return [dates1.indexOf(string) == -1];
-						// }
-						//  $(function() {
-						// 	$("#date1").datepicker({
-						// 		beforeShowDay: DisableDates1,
-						// 		dateFormat: 'yy/mm/dd'
-						// 	});
-						//  });
-						// function CancelONE(){
-						// 	var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	PayToRoom.OrderCancel($('#date1').val(),"room1",{from:userwalletaddress,gas:200000,gasPrice:21000});
-						// 	for(i=0;i<dates1.length;i++){
-						// 		if(dates1[i]==$('#date1').val()){
-						// 			delete dates1[i];
-						// 		}
-						// 	}
-						// }
+						 var dates2 = []; 
+						function DisableDates2(date) {
+							var string = jQuery.datepicker.formatDate('yy/mm/dd', date);
+							return [dates2.indexOf(string) == -1];
+						}
+						 $(function() {
+							$("#date2").datepicker({
+								beforeShowDay: DisableDates2,
+								dateFormat: 'yy/mm/dd'
+							});
+						 });
+						 function CancelTWO(){
+							var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							PayToRoom.OrderCancel($('#date2').val(),"room2",{from:userwalletaddress,gas:200000,gasPrice:21000});
+							for(i=0;i<dates2.length;i++){
+								if(dates2[i]==$('#date2').val()){
+									delete dates2[i];
+								}
+							}
+						}
 
-						//  var dates2 = []; 
-						// function DisableDates2(date) {
-						// 	var string = jQuery.datepicker.formatDate('yy/mm/dd', date);
-						// 	return [dates2.indexOf(string) == -1];
-						// }
-						//  $(function() {
-						// 	$("#date2").datepicker({
-						// 		beforeShowDay: DisableDates2,
-						// 		dateFormat: 'yy/mm/dd'
-						// 	});
-						//  });
-						//  function CancelTWO(){
-						// 	var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	PayToRoom.OrderCancel($('#date2').val(),"room2",{from:userwalletaddress,gas:200000,gasPrice:21000});
-						// 	for(i=0;i<dates2.length;i++){
-						// 		if(dates2[i]==$('#date2').val()){
-						// 			delete dates2[i];
-						// 		}
-						// 	}
-						// }
+						 var dates4 = []; 
+						function DisableDates4(date) {
+							var string = jQuery.datepicker.formatDate('yy/mm/dd', date);
+							return [dates4.indexOf(string) == -1];
+						}
+						 $(function() {
+							$("#date4").datepicker({
+								beforeShowDay: DisableDates4,
+								dateFormat: 'yy/mm/dd'
+							});
+						 });
+						 function CancelFOUR(){
+							for(i=0;i<dates4.length;i++){
+								var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+								PayToRoom.OrderCancel($('#date4').val(),"room4",{from:userwalletaddress,gas:200000,gasPrice:21000});
+								if(dates4[i]==$('#date4').val()){
+									delete dates4[i];
+								}
+							}
+						}
 
-						//  var dates4 = []; 
-						// function DisableDates4(date) {
-						// 	var string = jQuery.datepicker.formatDate('yy/mm/dd', date);
-						// 	return [dates4.indexOf(string) == -1];
-						// }
-						//  $(function() {
-						// 	$("#date4").datepicker({
-						// 		beforeShowDay: DisableDates4,
-						// 		dateFormat: 'yy/mm/dd'
-						// 	});
-						//  });
-						//  function CancelFOUR(){
-						// 	for(i=0;i<dates4.length;i++){
-						// 		var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 		PayToRoom.OrderCancel($('#date4').val(),"room4",{from:userwalletaddress,gas:200000,gasPrice:21000});
-						// 		if(dates4[i]==$('#date4').val()){
-						// 			delete dates4[i];
-						// 		}
-						// 	}
-						// }
+						 //var getQR = PayToRoom.getQR();
 
-						//  //var getQR = PayToRoom.getQR();
-
-						//  function confirmONE(){
-						// 	var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	PayToRoom.Orderprocessing($('#date1').val(),"room1",{from:userwalletaddress,gas:200000,gasPrice:21000});
-						// 	dates1.push($('#date1').val());
-						// 	$('#dateONE').html($('#date1').val());
-						//  }
+						 function confirmONE(){
+							var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							PayToRoom.Orderprocessing($('#date1').val(),"room1",{from:userwalletaddress,gas:200000,gasPrice:21000});
+							dates1.push($('#date1').val());
+							$('#dateONE').html($('#date1').val());
+						 }
 						 
-						//  function confirmTWO(){
-						// 	var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	PayToRoom.Orderprocessing($('#date2').val(),"room2",{from:userwalletaddress,gas:200000,gasPrice:21000});
-						// 	dates2.push($('#date2').val());
-						// 	$('#dateTWO').html($('#date2').val());
-						//  }
+						 function confirmTWO(){
+							var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							PayToRoom.Orderprocessing($('#date2').val(),"room2",{from:userwalletaddress,gas:200000,gasPrice:21000});
+							dates2.push($('#date2').val());
+							$('#dateTWO').html($('#date2').val());
+						 }
 
-						//  function confirmFOUR(){
-						// 	var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	PayToRoom.Orderprocessing($('#date4').val(),"room4",{from:userwalletaddress,gas:200000,gasPrice:21000});
-						// 	dates4.push($('#date4').val());
-						// 	$('#dateFOUR').html($('#date4').val());
-						//  }
+						 function confirmFOUR(){
+							var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							PayToRoom.Orderprocessing($('#date4').val(),"room4",{from:userwalletaddress,gas:200000,gasPrice:21000});
+							dates4.push($('#date4').val());
+							$('#dateFOUR').html($('#date4').val());
+						 }
 
-						//  function PayONE(){
-						// 	 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	 PayToRoom.paytoroom("room1",$('#date1').val(),userwalletaddress,{from:userwalletaddress,value:web3.toWei(1,"ether"),gas:200000,gasPrice:21000});
-						//  }
+						 function PayONE(){
+							 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							 PayToRoom.paytoroom("room1",$('#date1').val(),userwalletaddress,{from:userwalletaddress,value:web3.toWei(1,"ether"),gas:200000,gasPrice:21000});
+						 }
 
-						//  /*$("#confirmroomcontrolBTN").click(function() {
-						// 	 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	 PayToRoom.paytoroom("room1", $("#dateONE").val(),userwalletaddress,{from:userwalletaddress,value:web3.toWei(1,"ether")});
-						//  });*/
+						 /*$("#confirmroomcontrolBTN").click(function() {
+							 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							 PayToRoom.paytoroom("room1", $("#dateONE").val(),userwalletaddress,{from:userwalletaddress,value:web3.toWei(1,"ether")});
+						 });*/
 
-						//  function PayTWO(){
-						// 	 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	 PayToRoom.paytoroom("room2",$('#date2').val(),userwalletaddress,{from:userwalletaddress,value:web3.toWei(2,"ether"),gas:200000,gasPrice:21000});
-						//  }
+						 function PayTWO(){
+							 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							 PayToRoom.paytoroom("room2",$('#date2').val(),userwalletaddress,{from:userwalletaddress,value:web3.toWei(2,"ether"),gas:200000,gasPrice:21000});
+						 }
 
-						//  function PayFOUR(){
-						// 	 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	 PayToRoom.paytoroom("room4",$('#date4').val(),userwalletaddress,{from:userwalletaddress,value:web3.toWei(4,"ether"),gas:200000,gasPrice:21000});
-						//  }
+						 function PayFOUR(){
+							 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							 PayToRoom.paytoroom("room4",$('#date4').val(),userwalletaddress,{from:userwalletaddress,value:web3.toWei(4,"ether"),gas:200000,gasPrice:21000});
+						 }
 
-						//  function GetQRcodeONE(){
-						// 	 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	 $("#qrcodeONE").html(PayToRoom.controlQR("room1",$('#date1').val(),userwalletaddress,{from:userwalletaddress,gas:200000}));
-						// 	 //var url = "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=" + textQR + "&choe=UTF-8&chld=M|2";
-						// 	 //var qr_code = "<img alt='Your QRcode' src='" + url + "' />";
-						// 	 //$("#qrcodeONE").html(qr_code);
-						//  }
+						 function GetQRcodeONE(){
+							 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							 $("#qrcodeONE").html(PayToRoom.controlQR("room1",$('#date1').val(),userwalletaddress,{from:userwalletaddress,gas:200000}));
+							 //var url = "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=" + textQR + "&choe=UTF-8&chld=M|2";
+							 //var qr_code = "<img alt='Your QRcode' src='" + url + "' />";
+							 //$("#qrcodeONE").html(qr_code);
+						 }
 
-						//  function GetQRcodeTWO(){
-						// 	 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	 $("#qrcodeTWO").html(PayToRoom.controlQR("room2",$('#date2').val(),userwalletaddress,{from:userwalletaddress,gas:200000}));
-						//  }
+						 function GetQRcodeTWO(){
+							 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							 $("#qrcodeTWO").html(PayToRoom.controlQR("room2",$('#date2').val(),userwalletaddress,{from:userwalletaddress,gas:200000}));
+						 }
 
-						//  function GetQRcodeFOUR(){
-						// 	 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
-						// 	 $("#qrcodeFOUR").html(PayToRoom.controlQR("room4",$('#date4').val(),userwalletaddress,{from:userwalletaddress,gas:200000}));
-						//  }
+						 function GetQRcodeFOUR(){
+							 var userwalletaddress = AccountManagement.CheckAccount($("#loginusername").val());
+							 $("#qrcodeFOUR").html(PayToRoom.controlQR("room4",$('#date4').val(),userwalletaddress,{from:userwalletaddress,gas:200000}));
+						 }
 
-						 /*getQR.watch(function(error,result){
+						 getQR.watch(function(error,result){
 							if (!error)
 								{
 									$("#loader").hide();
@@ -376,7 +411,7 @@
 									$("#loader").hide();
 									console.log(error);
 								}
-						})*/
+						})
 
 
 
